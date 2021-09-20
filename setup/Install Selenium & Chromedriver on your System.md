@@ -1,7 +1,16 @@
 # Setup Selenium & Chromedriver on your System
 
-## Using Google Colab
+There are many ways to use chromedriver & selenium. Here are the ways we do it in this guide:
+
+- Google Colab
+- macOS
+- Linux (debian systems)
+- Windows (coming soon)
+- Docker
+
+## Google Colab
 Go to [this link](https://colab.research.google.com/github/codingforentrepreneurs/Scrape-Websites-with-Python-FastAPI-Celery-NoSQL/blob/main/setup/chromedriver-selenium-notebook.ipynb). It uses the notebook saved [here](./chromedriver-selenium-notebook.ipynb).
+
 
 ## macOS
 ### 1. Install __chromedriver__ via [homebrew](https://brew.sh) [formulae](https://formulae.brew.sh/cask/chromedriver)
@@ -62,3 +71,37 @@ pip install selenium
 
 
 ## Windows (coming soon)
+
+
+
+## Using Docker 
+
+__pre-built__
+```dockerfile
+FROM codingforentrepreneurs/python:3.9-webapp-selenium
+```
+
+__manually__
+```dockerfile
+FROM python:3.9-slim
+
+RUN apt-get update && \
+    apt-get install -y \
+    build-essential \
+    python3-dev \
+    python3-setuptools \
+    git \
+    git-crypt \
+    unzip \
+    chromium-driver \
+    gcc \
+    make
+
+RUN python -m pip install selenium
+
+# Create a virtual environment in /opt
+RUN python3 -m venv /opt/venv && /opt/venv/bin/python -m pip install selenium
+
+RUN apt-get autoremove -y \
+    && rm -rf /var/lib/apt/lists/*
+```
