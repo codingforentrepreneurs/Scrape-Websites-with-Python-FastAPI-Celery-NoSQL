@@ -21,3 +21,16 @@ This series is broken up into 4 parts:
 - **Data models** how to store and validate data with `cassandra-driver`, `pydantic`, and **AstraDB**.
 - **Worker & Scheduling** how to schedule periodic tasks (ie scraping) integrated with Redis & AstraDB
 - **Presentation** How to combine the above steps in as robust web application service
+
+
+
+## Setup your system.
+Below is a preflight checklist to ensure you system is fully setup to work with this course. All guides and setup can be found in the [setup](./setup) directory of this repo.
+
+### Preflight checklist
+- [] Install Selenium & Chromedriver ([setup guide](./setup/Install Selenium & Chromedriver on your System.md))
+- [] Install Redis ([setup guide](./setup/Setup Redis.md))
+- [] Create a virtual environment & install dependencies
+- [] Setup an account with DataStax
+- [] Create your first AstraDB and get API credentials
+- [] Use `cassandra-driver` to verify your connection to AstraDB
