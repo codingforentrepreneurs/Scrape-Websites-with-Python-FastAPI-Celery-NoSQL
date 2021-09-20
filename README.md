@@ -28,8 +28,8 @@ This series is broken up into 4 parts:
 Below is a preflight checklist to ensure you system is fully setup to work with this course. All guides and setup can be found in the [setup](./setup) directory of this repo.
 
 ### Preflight checklist
-- [] Install Selenium & Chromedriver ([setup guide](./setup/Install Selenium & Chromedriver on your System.md))
-- [] Install Redis ([setup guide](./setup/Setup Redis.md))
+- [] Install Selenium & Chromedriver - [setup guide](./setup/Install%20Selenium%20%26%20Chromedriver%20on%20your%20System.md)
+- [] Install Redis  - [setup guide](./setup/Setup%20Redis.md)
 - [] Create a virtual environment & install dependencies
 - [] Setup an account with DataStax
 - [] Create your first AstraDB and get API credentials
