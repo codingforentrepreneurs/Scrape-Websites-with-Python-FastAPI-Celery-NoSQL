@@ -1,5 +1,8 @@
 # Setup Selenium & Chromedriver on your System
 
+## Using Google Colab
+Go to [this link](https://colab.research.google.com/github/codingforentrepreneurs/Scrape-Websites-with-Python-FastAPI-Celery-NoSQL/blob/main/setup/chromedriver-selenium-notebook.ipynb). It uses the notebook saved [here](./chromedriver-selenium-notebook.ipynb).
+
 ## macOS
 ### 1. Install __chromedriver__ via [homebrew](https://brew.sh) [formulae](https://formulae.brew.sh/cask/chromedriver)
 ```
