@@ -3,6 +3,7 @@
 There are many ways to use chromedriver & selenium. Here are the ways we do it in this guide:
 
 - Google Colab
+- Deepnote
 - macOS
 - Linux (debian systems)
 - Windows (coming soon)
@@ -10,6 +11,9 @@ There are many ways to use chromedriver & selenium. Here are the ways we do it i
 
 ## Google Colab
 Go to [this link](https://colab.research.google.com/github/codingforentrepreneurs/Scrape-Websites-with-Python-FastAPI-Celery-NoSQL/blob/main/setup/chromedriver-selenium-notebook.ipynb). It uses the notebook saved [here](./chromedriver-selenium-notebook.ipynb).
+
+## Deepnote
+Much like Google Colab, you can use Deepnote.com to run this setup. Click [this link](https://deepnote.com/launch?name=Scrape-Websites-with-Python-FastAPI-Celery-NoSQL&url=https://github.com/codingforentrepreneurs/Scrape-Websites-with-Python-FastAPI-Celery-NoSQL/blob/main/setup/chromedriver-selenium-notebook.ipynb) to launch it. It uses the notebook saved [here](./chromedriver-selenium-notebook.ipynb).
 
 
 ## macOS
