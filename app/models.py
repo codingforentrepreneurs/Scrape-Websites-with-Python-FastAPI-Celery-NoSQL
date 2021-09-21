@@ -1,9 +1,9 @@
 from cassandra.cqlengine import columns
 from cassandra.cqlengine.models import Model
-# data = {
-#     "asin": "AMZNIDNUMBER",
-#     "title": "Mark 1"
-# }
+data = {
+    "asin": "AMZNIDNUMBERd",
+    "title": "Mark 1adsf"
+}
 
 
 class Product(Model): # -> table
