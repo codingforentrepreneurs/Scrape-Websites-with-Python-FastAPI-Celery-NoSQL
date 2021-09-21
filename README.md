@@ -4,15 +4,16 @@ Learn how to scrape websites with Python, Selenium, Requests HTML, Celery, FastA
 
 Here's what each tool is used for:
 
-- **Python** - programming the logic.
-- **Selenium** - an automated web browsing experience that allows:
+- **Python 3.9** [download](https://www.python.org/download/) - programming the logic.
+- **AstraDB** [sign up](https://dtsx.io/3nQnjz1) - highly perfomant and scalable database service by DataStax. AstraDB is a Cassandra NoSQL Database. Cassandra is used by Netflix, Discord, Apple, and many others to handle astonding amounts of data.
+- **Selenium** [docs](https://selenium-python.readthedocs.io/) - an automated web browsing experience that allows:
   - Run all web-browser actions through code
   - Loads JavaScript heavy websites
   - Can perform standard user interaction like clicks, form submits, logins, etc.
-- **Requests HTML** - we're going to use this to parse an HTML document extracted from Selenium
-- **Celery** - Celery providers worker processes that will allow us to schedule when we need to scrape websites
-- **FastAPI** - as a web application framework to Display and monitor web scraping results from anywhere
-- **AstraDB** - highly perfomant and scalable database service by DataStax. AstraDB is a Cassandra NoSQL Database. Cassandra is used by Netflix, Discord, Apple, and many others to handle astonding amounts of data.
+- **Requests HTML** [docs](https://docs.python-requests.org/) - we're going to use this to parse an HTML document extracted from Selenium
+- **Celery** [docs](https://docs.celeryproject.org/) - Celery providers worker processes that will allow us to schedule when we need to scrape websites. We'll be using [redis](https://redis.io/) as our task queue.
+- **FastAPI** [docs](https://fastapi.tiangolo.com/) - as a web application framework to Display and monitor web scraping results from anywhere
+
 
 
 This series is broken up into 4 parts:
