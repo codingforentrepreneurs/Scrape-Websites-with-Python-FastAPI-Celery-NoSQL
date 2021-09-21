@@ -1,0 +1,16 @@
+fastapi
+gunicorn
+uvicorn
+pytest
+pre-commit
+requests
+celery
+aiofiles
+redis
+cassandra-driver
+dateparser
+pandas
+requests_html
+selenium
+python-dotenv
+python-slugify
