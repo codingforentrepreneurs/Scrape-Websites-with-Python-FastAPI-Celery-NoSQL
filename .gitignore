@@ -1,3 +1,5 @@
+etc/
+share/
 app/ignored/
 .DS_Store
 bin/
