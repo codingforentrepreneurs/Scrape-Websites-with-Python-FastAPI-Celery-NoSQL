@@ -13,6 +13,13 @@ class Product(Model): # -> table
     price_str = columns.Text(default="-100")
 
 
-# def this -> Product.objects().filter(asin="AMZNIDNUMBER")
+class ProductScrapeEvent(Model): # -> table
+    __keyspace__ = "scraper_app" #
+    uuid = columns.UUID(primary_key=True)
+    asin = columns.Text(index=True)
+    title = columns.Text()
+    price_str = columns.Text(default="-100")
+
+# def this -> ProductScrapeEvent.objects().filter(asin="AMZNIDNUMBER")
 
 # not this -> Product.objects().filter(title="Mark 1")
