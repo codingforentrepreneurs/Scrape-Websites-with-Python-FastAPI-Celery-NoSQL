@@ -5,6 +5,7 @@ from cassandra.cqlengine.management import sync_table
 from . import (
     db,
     config,
+    crud,
     models,
     schema,
 )
@@ -35,6 +36,13 @@ def products_list_view():
     return list(Product.objects.all())
 
 
+@app.post("/events/scrape")
+def events_scrape_create_view(data: schema.ProductListSchema):
+    product, _ = crud.add_scrape_event(data.dict())
+    return product
+
+
+
 @app.get("/products/{asin}",)
 def products_detail_view(asin):
     data = dict(Product.objects.get(asin=asin))
@@ -47,4 +55,4 @@ def products_detail_view(asin):
 
 @app.get("/products/{asin}/events", response_model=List[schema.ProductScrapeEventDetailSchema])
 def products_scrapes_list_view(asin):
-    return list(ProductScrapeEvent.objects().filter(asin=asin).limit(5))
+    return list(ProductScrapeEvent.objects().filter(asin=asin))
