@@ -14,3 +14,4 @@ requests_html
 selenium
 python-dotenv
 python-slugify
+fake-useragent
