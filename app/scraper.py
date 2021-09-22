@@ -24,11 +24,18 @@ def extract_price_from_string(value: str, regex=r"[\$]{1}[\d,]+\.?\d{0,2}"):
 
 @dataclass
 class Scraper:
-    url: str
+    url: str = None
+    asin: str = None
     endless_scroll : bool = False
     endless_scroll_time: int = 5
     driver: WebDriver = None
     html_obj: HTML = None
+
+    def __post_init__(self):
+        if self.asin:
+            self.url = f"https://www.amazon.com/dp/{self.asin}/"
+        if not self.asin or not self.url:
+            raise Exception(f"asin or url is required.")
 
     def get_driver(self):
         if self.driver is None:

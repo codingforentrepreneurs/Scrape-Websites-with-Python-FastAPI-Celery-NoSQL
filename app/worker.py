@@ -10,8 +10,11 @@ from cassandra.cqlengine.management import sync_table
 
 from . import (
     config,
+    crud,
     db,
-    models
+    models,
+    schema,
+    scraper
 )
 
 celery_app = Celery(__name__)
@@ -71,7 +74,17 @@ def list_products():
 
 @celery_app.task
 def scrape_asin(asin):
-    print(asin)
+    s = scraper.Scraper(asin=asin, endless_scroll=True)
+    dataset = s.scrape()
+    try:
+        validated_data = schema.ProductListSchema(**dataset)
+    except:
+        validated_data = None
+    if validated_data is not None:
+        product, _ = crud.add_scrape_event(validated_data.dict())
+        return asin, True
+    return asin, False
+
 
 
 @celery_app.task
