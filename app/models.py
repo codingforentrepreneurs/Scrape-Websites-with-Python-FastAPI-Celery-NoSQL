@@ -6,6 +6,7 @@ data = {
 }
 
 
+# List View -> Detail View
 class Product(Model): # -> table
     __keyspace__ = "scraper_app" #
     asin = columns.Text(primary_key=True, required=True)
@@ -13,9 +14,10 @@ class Product(Model): # -> table
     price_str = columns.Text(default="-100")
 
 
+# Detail View for asin
 class ProductScrapeEvent(Model): # -> table
     __keyspace__ = "scraper_app" #
-    uuid = columns.UUID(primary_key=True)
+    uuid = columns.UUID(primary_key=True) # uuid.uuid1() -> #time
     asin = columns.Text(index=True)
     title = columns.Text()
     price_str = columns.Text(default="-100")
