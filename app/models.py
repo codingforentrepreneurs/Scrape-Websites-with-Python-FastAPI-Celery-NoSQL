@@ -11,8 +11,9 @@ class Product(Model): # -> table
     __keyspace__ = "scraper_app" #
     asin = columns.Text(primary_key=True, required=True)
     title = columns.Text()
+    brand = columns.Text()
     price_str = columns.Text(default="-100")
-
+    country_of_origin = columns.Text()
 
 # Detail View for asin
 class ProductScrapeEvent(Model): # -> table
@@ -20,6 +21,8 @@ class ProductScrapeEvent(Model): # -> table
     uuid = columns.UUID(primary_key=True) # uuid.uuid1() -> #time
     asin = columns.Text(index=True)
     title = columns.Text()
+    brand = columns.Text()
+    country_of_origin = columns.Text() 
     price_str = columns.Text(default="-100")
 
 # def this -> ProductScrapeEvent.objects().filter(asin="AMZNIDNUMBER")

@@ -97,6 +97,7 @@ class Scraper:
                     # print(key, value)
                     data = {}
                     key = slugify(key)
+                    key = key.replace("-", "_")
                     if key in dataset:
                         continue
                     else:
@@ -135,5 +136,6 @@ class Scraper:
         return {
             "price_str": price_str,
             "title_str": title_str,
+            "title": title_str,
             **dataset
         }

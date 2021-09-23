@@ -13,6 +13,8 @@ class ProductListSchema(BaseModel):
     asin: str
     title: Optional[str]
     price_str: Optional[str]
+    brand: Optional[str]
+    country_of_origin: Optional[str]
 
 
 class ProductScrapeEventSchema(BaseModel):
@@ -27,6 +29,8 @@ class ProductScrapeEventDetailSchema(BaseModel):
     title: Optional[str]
     price_str: Optional[str]
     created: Optional[Any] = None
+    brand: Optional[str]
+    country_of_origin: Optional[str]
 
     @root_validator(pre=True)
     def extra_create_time_from_uuid(cls, values):
